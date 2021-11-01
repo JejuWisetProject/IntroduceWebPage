@@ -1,0 +1,94 @@
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+  margin: 0;
+}
+div,
+section,
+header,
+footer,
+p,
+h1,
+h2 {
+  box-sizing: border-box;
+}
+a {
+  color: royalblue;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  margin-top: 5%;
+}
+.global-width {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* 전체 아이템들을 0으로 맞춘 다음 해당 아이템이
+   보여져야할 때 opacity : 1로 변경 */
+  opacity: 0;
+  /* 부드러운 변경 효과 */
+  transition: 0.5s;
+  will-change: opacity;
+}
+.visible {
+  opacity: 1;
+}
+.scroll-graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.scene-img {
+  max-height: 100vh;
+}
+.scroll-text {
+  /* 글자를 그림 위로 */
+  position: relative;
+}
+.step {
+  margin-bottom: 60vh;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+  /* box-shadow : 색 , x-offset, y-offset, blur */
+}
+.bird {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 250px;
+  transform: translateX(-100%);
+  transition: 2.5s 0.5s linear;
+}
+
+.global-footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.last {
+  margin-bottom: 10vh;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+section h1 {
+  font-size: 2em;
+}
